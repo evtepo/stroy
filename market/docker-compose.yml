@@ -1,0 +1,20 @@
+version: '3.5'
+services:
+  market:
+    container_name: market
+    build: ./src/
+    env_file:
+      - ./src/configs/.env.example
+    restart: always
+    ports:
+      - "8000:8000"
+
+  market_storage:
+    image: postgres:13
+    container_name: market_storage
+    env_file:
+      - ./src/configs/.env.example
+    expose:
+      - "5432"
+    volumes:
+      - /postgresql/data:/var/lib/postgresql/data
