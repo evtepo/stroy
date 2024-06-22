@@ -15,7 +15,7 @@ class Settings(BaseSettings):
 
     postgres_db: str = Field(alias="POSTGRES_DB", default="otdelka")
     postgres_user: str = Field(alias="POSTGRES_USER", default="postgres")
-    postgres_password: str = Field(alias="POSTGRES_PASSWORD", default="password")
+    postgres_password: str = Field(alias="POSTGRES_PASSWORD", default="postgres")
     postgres_host: str = Field(alias="POSTGRES_HOST", default="localhost")
     postgres_port: str = Field(alias="POSTGRES_PORT", default="5432")
 
